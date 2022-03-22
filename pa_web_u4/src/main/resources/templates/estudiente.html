@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.thymeleaf.org">
+
+
+
+<head>
+
+</head>
+
+
+
+<body>
+	<table>
+		<!--Fila del Id-->
+		<tr>
+			<td th:text="'Id:'" />
+			<td th:text=${estudi.id} />
+		</tr>
+		<!--Fila del Nombre-->
+		<tr>
+			<td th:text="'Nombre:'" />
+			<td th:text=${estudi.nombre} />
+		</tr>
+		<!--Fila del Apellido-->
+		<tr>
+			<td th:text="'Apellido:'" />
+			<td th:text=${estudi.apellido} />
+		</tr>
+	</table>
+</body>
+
+
+
+</html>

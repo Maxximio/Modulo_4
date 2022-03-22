@@ -35,18 +35,18 @@ public class PaWebU4Application implements CommandLineRunner {
 //		Integer valor3 = this.proFaService.calcularDeuda("2345", 4);
 //		Integer valor4 = this.proFaService.calcularDeuda("5432", 4);
 
-		CompletableFuture<Integer> valor1 = this.proFaService.calcularDeudaFuture("1234", 4);
-		CompletableFuture<Integer> valor2 = this.proFaService.calcularDeudaFuture("4321", 4);
-		CompletableFuture<Integer> valor3 = this.proFaService.calcularDeudaFuture("2345", 4);
-		CompletableFuture<Integer> valor4 = this.proFaService.calcularDeudaFuture("5432", 4);
-		
-		CompletableFuture.allOf(valor1,valor2,valor3,valor4).join();
-		
-		//log.info("valor1: " + valor1);
-		log.info("Total: " + (valor1.get() + valor2.get() + valor3.get() + valor4.get()));
-		long tFinal = System.currentTimeMillis();
-		long tiempoT = (inicio - tFinal) / 1000;
-		log.info(tiempoT + " seg");
+//		CompletableFuture<Integer> valor1 = this.proFaService.calcularDeudaFuture("1234", 4);
+//		CompletableFuture<Integer> valor2 = this.proFaService.calcularDeudaFuture("4321", 4);
+//		CompletableFuture<Integer> valor3 = this.proFaService.calcularDeudaFuture("2345", 4);
+//		CompletableFuture<Integer> valor4 = this.proFaService.calcularDeudaFuture("5432", 4);
+//		
+//		CompletableFuture.allOf(valor1,valor2,valor3,valor4).join();
+//		
+//		//log.info("valor1: " + valor1);
+//		log.info("Total: " + (valor1.get() + valor2.get() + valor3.get() + valor4.get()));
+//		long tFinal = System.currentTimeMillis();
+//		long tiempoT = (inicio - tFinal) / 1000;
+//		log.info(tiempoT + " seg");
 	}
 
 }

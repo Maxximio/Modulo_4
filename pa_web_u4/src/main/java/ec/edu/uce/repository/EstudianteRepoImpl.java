@@ -26,8 +26,7 @@ public class EstudianteRepoImpl implements IEstudianteRepo{
 
 	@Override
 	public List<Estudiante> buscarTodos() {
-		TypedQuery<Estudiante> myQuery=this.entityManager.createQuery("select e from Estudiente",Estudiante.class);
-		
+		TypedQuery<Estudiante> myQuery=this.entityManager.createQuery("select e from Estudiente e",Estudiante.class);
 		return myQuery.getResultList();
 	}
 

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+</head>
+
+<body>
+	<form th:action="@{/estudiantes/insertar}" th:object="${estu}" method="POST"> 
+	<table>
+		<tr>
+			<td>
+				<label for="name">Nombre:</label>
+			</td>
+			<td>
+				<input type="text" id="nombre" th:filed="*{nombre}" placeholder="Nombre"><span 
+				th:if="${fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label>Apellido:</label>
+			</td>
+			<td>
+				<input type="text" id="apellido" th:filed="*{apellido}" placeholder="Apellido"><span 
+				th:if="${fields.hasErrors('nombre')}" th:errors="*{nombre}"></span>
+			</td>
+		</tr>
+		</table>
+		<input type="submit" value="Guardar">
+	</form>
+</body>
+
+
+</html>

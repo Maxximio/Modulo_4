@@ -13,7 +13,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 import ec.edu.uce.service.IProcesamientoFacultad;
 
 @SpringBootApplication
-@EnableAsync
+//@EnableAsync
 public class PaWebU4Application implements CommandLineRunner {
 
 	private static final Logger log = LoggerFactory.getLogger(PaWebU4Application.class);

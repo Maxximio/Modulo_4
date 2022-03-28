@@ -5,12 +5,13 @@
 </head>
 
 <body>
-
-	<form action="#" th:action="@{/estudiantes/insertar}" th:object="${estudiante}" method="post"> 
+	<form action="#" th:action="@{/estudiantes/actualizar/{idEstudiante}(idEstudiante=${estudiante.id})}" 
+	th:object="${estudiante}" th:method="put"> 
 	<table>
+	
 		<tr>
 			<td>
-				<label>Nombre:</label>
+				<label for="name">Nombre:</label>
 			</td>
 			<td>
 				<input type="text" id="nombre" th:field="*{nombre}">
@@ -25,7 +26,7 @@
 			</td>
 		</tr>
 		</table>
-		<input type="submit" value="Guardar">
+		<input type="submit" value="Actualizar">
 	</form>
 </body>
 
